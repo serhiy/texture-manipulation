@@ -1,9 +1,29 @@
-package test;
+package xyz.codingdaddy.texture.manipulation;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * Constructs normal map from height map.
+ * 
+ * @author sboychen
+ */
 public class HeightMapToNormalMap {
-	public static BufferedImage convert(BufferedImage image, float scale) {
+	/**
+	 * Constructs normal map from height map (with only four adjacent pixels).
+	 * 
+	 * @param image corresponding to height map.
+	 * @param scale controlling the color transition smoothness (the lower the scale is the smoother transition will be).
+	 * @return resulting normal map.
+	 */
+	public static BufferedImage constuct(BufferedImage image, float scale) {
+		if (image == null) {
+			throw new IllegalArgumentException("Source image cannot be null!");
+		}
+		
+		if (scale < 0) {
+			throw new IllegalArgumentException("Scale must be positive!");
+		}
+		
 		BufferedImage normalMap = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
 		
 		float [][] pixelHeights = new float[image.getHeight()][image.getWidth()];
@@ -12,7 +32,6 @@ public class HeightMapToNormalMap {
 				pixelHeights[line][column] = pixelHeight(image.getRGB(column, line), scale);
 			}
 		}
-		
 		
 		int left, right, up, down, normalColorRGB, normalColorRGBA;
 		for (int line = 0; line < image.getHeight(); line++) {

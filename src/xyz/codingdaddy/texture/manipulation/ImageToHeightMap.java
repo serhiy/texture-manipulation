@@ -1,9 +1,25 @@
-package test;
+package xyz.codingdaddy.texture.manipulation;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * Constructs a height map from the source image.
+ * 
+ * @author sboychen
+ */
 public class ImageToHeightMap {
-	public static BufferedImage convert(BufferedImage image) {
+	
+	/**
+	 * Constructs height map from source image.
+	 * 
+	 * @param image to be converted to height map.
+	 * @return resulting height map.
+	 */
+	public static BufferedImage construct(BufferedImage image) {
+		if (image == null) {
+			throw new IllegalArgumentException("Source image cannot be null!");
+		}
+		
 		BufferedImage greyscaleImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
 		for (int line = 0; line < image.getHeight(); line++) {
 			for (int column = 0; column < image.getWidth(); column++) {

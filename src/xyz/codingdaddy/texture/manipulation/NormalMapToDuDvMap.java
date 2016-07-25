@@ -1,9 +1,21 @@
-package test;
+package xyz.codingdaddy.texture.manipulation;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * Constructs a DuDv map from the normal map.
+ * 
+ * @author sboychen
+ */
 public class NormalMapToDuDvMap {
-	public static BufferedImage convert(BufferedImage image) {
+	
+	/**
+	 * Constructs DuDv map from source image.
+	 * 
+	 * @param image corresponding to normal map.
+	 * @return resulting DuDv map.
+	 */
+	public static BufferedImage construct(BufferedImage image) {
 		BufferedImage duDvMap = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
 		for (int line = 0; line < image.getHeight(); line++) {
 			for (int column = 0; column < image.getWidth(); column++) {
