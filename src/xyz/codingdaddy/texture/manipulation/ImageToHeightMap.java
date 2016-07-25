@@ -10,12 +10,12 @@ import java.awt.image.BufferedImage;
 public class ImageToHeightMap {
 	
 	/**
-	 * Constructs height map from source image.
+	 * Converts source image to height map.
 	 * 
 	 * @param image to be converted to height map.
 	 * @return resulting height map.
 	 */
-	public static BufferedImage construct(BufferedImage image) {
+	public static BufferedImage convert(BufferedImage image) {
 		if (image == null) {
 			throw new IllegalArgumentException("Source image cannot be null!");
 		}

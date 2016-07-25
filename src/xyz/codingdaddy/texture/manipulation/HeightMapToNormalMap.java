@@ -9,13 +9,13 @@ import java.awt.image.BufferedImage;
  */
 public class HeightMapToNormalMap {
 	/**
-	 * Constructs normal map from height map (with only four adjacent pixels).
+	 * Converts height map to normal map (with only four adjacent pixels).
 	 * 
 	 * @param image corresponding to height map.
 	 * @param scale controlling the color transition smoothness (the lower the scale is the smoother transition will be).
 	 * @return resulting normal map.
 	 */
-	public static BufferedImage constuct(BufferedImage image, float scale) {
+	public static BufferedImage convert(BufferedImage image, float scale) {
 		if (image == null) {
 			throw new IllegalArgumentException("Source image cannot be null!");
 		}

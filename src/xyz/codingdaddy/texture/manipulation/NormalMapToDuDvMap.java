@@ -10,12 +10,16 @@ import java.awt.image.BufferedImage;
 public class NormalMapToDuDvMap {
 	
 	/**
-	 * Constructs DuDv map from source image.
+	 * Converts normal map to DuDv map.
 	 * 
 	 * @param image corresponding to normal map.
 	 * @return resulting DuDv map.
 	 */
-	public static BufferedImage construct(BufferedImage image) {
+	public static BufferedImage convert(BufferedImage image) {
+		if (image == null) {
+			throw new IllegalArgumentException("Source image cannot be null!");
+		}
+		
 		BufferedImage duDvMap = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
 		for (int line = 0; line < image.getHeight(); line++) {
 			for (int column = 0; column < image.getWidth(); column++) {
