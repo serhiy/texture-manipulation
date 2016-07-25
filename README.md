@@ -10,6 +10,22 @@ The project requires Maven to be built from sources. To build the JAR for your c
 	mvn package
 ```
 
+You can add this project as Maven dependency using jitpack:
+```
+	<dependency>
+	    <groupId>com.github.serhiy</groupId>
+	    <artifactId>texture-manipulation</artifactId>
+	    <version>0.0.1</version>
+	</dependency>
+	
+	<repositories>
+	    <repository>
+	        <id>jitpack.io</id>
+	        <url>https://jitpack.io</url>
+	    </repository>
+	</repositories>
+```
+
 ## Examples:
 
 - Convert image to height map:
