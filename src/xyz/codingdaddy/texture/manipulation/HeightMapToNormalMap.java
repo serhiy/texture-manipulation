@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 /**
  * Constructs normal map from height map.
  * 
- * @author sboychen
+ * @author serhiy
  */
 public class HeightMapToNormalMap {
 	/**

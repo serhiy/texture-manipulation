@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 /**
  * Constructs a DuDv map from the normal map.
  * 
- * @author sboychen
+ * @author serhiy
  */
 public class NormalMapToDuDvMap {
 	

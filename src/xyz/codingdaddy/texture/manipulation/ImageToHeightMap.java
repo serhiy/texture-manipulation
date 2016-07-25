@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 /**
  * Constructs a height map from the source image.
  * 
- * @author sboychen
+ * @author serhiy
  */
 public class ImageToHeightMap {
 	
