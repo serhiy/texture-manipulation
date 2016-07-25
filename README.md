@@ -3,6 +3,13 @@
 ## Disclaimer: 
 This work is essentially a port of the existing C code: https://sourceforge.net/p/ssbumpgenerator/svn/HEAD/tree/Normal2DuDv/, so I might not be fully available to answer the questions about the algorithms and constants used in the implementation.
 
+## Building
+
+The project requires Maven to be built from sources. To build the JAR for your code, you can execute the following command in the root of the texture-manipulation project:
+```
+	mvn package
+```
+
 ## Examples:
 
 - Convert image to height map:
