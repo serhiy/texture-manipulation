@@ -48,5 +48,3 @@ You can add this project as Maven dependency using jitpack:
 	BufferedImage dudvMap = NormalMapToDuDvMap.convert(image);
 	ImageIO.write(dudvMap, "PNG", "<output image path>");
 ```
-	
-## Licence:
